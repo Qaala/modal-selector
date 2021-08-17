@@ -34,3 +34,8 @@ Parametreleri
   - `id`
   - `children`
 - `modal`
+
+## Dependencies
+- jQuery
+- FontAwesome
+- Bootstrap
