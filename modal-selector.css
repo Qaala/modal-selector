@@ -18,11 +18,22 @@
   background-color: rgba(48, 54, 65);
 }
 
+.modal-selector .modal-body {
+  height: 100%;
+}
+
 .modal-selector .search-area {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
   padding: 20px;
+  height: 10%;
+}
+
+/* Main list group */
+.modal-selector .modal-body > .list-group{
+  height: 90%;
+  overflow-y: scroll;
 }
 
 .modal-selector .list-group-item {
