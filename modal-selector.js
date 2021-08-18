@@ -19,6 +19,11 @@
       localization: {
         search: "Ara"
       },
+      icons: {
+      	search: "fas fa-search",
+      	parent: "fas fa-level-up-alt fa-rotate-90",
+      	child: "fas fa-play"
+      },
       onSelect: null
     }, options);
 
@@ -62,7 +67,7 @@
                       <div class="input-group mb-3">
                         <input id="modal-selector-search-${settings._.id}" type="text" class="form-control" placeholder="${settings.localization.search}">
                         <div class="input-group-append">
-                          <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
+                          <span class="input-group-text" id="basic-addon2"><i class="${settings.icons.search}"></i></span>
                         </div>
                       </div>
                     </div>
@@ -73,7 +78,7 @@
                           let isLastChild = true;
                           if(item.hasOwnProperty(settings.childrenProperty)) isLastChild = false;
                           html += `<li class="list-group-item modal-selector-item ${isLastChild ? 'last-item' : ''}" data-data='${JSON.stringify(item)}'
-                            style="padding-left: ${index}em"><i class="fas ${isLastChild ? 'fa-play' : 'fa-level-up-alt fa-rotate-90'} mr-3"></i>
+                            style="padding-left: ${index}em"><i class="${isLastChild ? settings.icons.child : settings.icons.parent} mr-3"></i>
                             ${item[settings.nameProperty]}</li>`;
                           if(!isLastChild){
                             index++;
