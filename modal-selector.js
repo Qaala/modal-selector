@@ -76,7 +76,7 @@
                         let html = ``;
                         data.forEach(item => {
                           let isLastChild = true;
-                          if(item.hasOwnProperty(settings.childrenProperty)) isLastChild = false;
+                          if(item.hasOwnProperty(settings.childrenProperty) && item[settings.childrenProperty].length !== 0) isLastChild = false;
                           html += `<li class="list-group-item modal-selector-item ${isLastChild ? 'last-item' : ''}" data-data='${JSON.stringify(item)}'
                             style="padding-left: ${index}em"><i class="${isLastChild ? settings.icons.child : settings.icons.parent} mr-3"></i>
                             ${item[settings.nameProperty]}</li>`;
